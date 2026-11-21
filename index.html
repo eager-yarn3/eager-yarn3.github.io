@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>糖心vl_原创影像社区,记录真实与温暖的品牌官网</title>
+<meta name="description" content="糖心vl官方网站，专注原创影像与生活记录的视频品牌，为创作者搭建高品质内容生态，持续输出真实、温暖、有力量的精品内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e8628c'/%3E%3Cpath d='M20 24c0-6 5-9 12-9s12 3 12 9c0 5-3 7-7 9 5 2 8 5 8 10 0 7-6 11-13 11s-12-4-12-10 3-9 8-11c-5-2-8-4-8-9z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --tx-pink:#e8628c;
+  --tx-pink-deep:#c23f6a;
+  --tx-plum:#3a1f33;
+  --tx-cream:#fff8f5;
+  --tx-soft:#fdeef3;
+  --tx-ink:#2c1f28;
+  --tx-muted:#7d6572;
+  --tx-line:#f1dbe4;
+  --tx-gold:#f0b429;
+  --tx-shadow:0 18px 40px -24px rgba(58,31,51,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;
+  background:var(--tx-cream);
+  color:var(--tx-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input{font-family:inherit}
+section{scroll-margin-top:132px}
+.tx-container{width:min(1180px,92vw);margin:0 auto}
+
+/* ---------- 吸顶区 ---------- */
+.tx-sticky-wrap{position:sticky;top:0;z-index:80}
+.tx-announce{
+  background:linear-gradient(90deg,var(--tx-plum),#5a2c48 55%,var(--tx-pink-deep));
+  color:#ffe9f1;font-size:13.5px;
+}
+.tx-announce-inner{
+  width:min(1180px,92vw);margin:0 auto;display:flex;align-items:center;gap:14px;
+  padding:9px 0;overflow:hidden;
+}
+.tx-announce-tag{
+  flex:0 0 auto;background:var(--tx-gold);color:#3a1f33;font-weight:700;
+  font-size:12px;padding:2px 9px;border-radius:999px;letter-spacing:.5px;
+}
+.tx-announce-track{display:flex;gap:34px;white-space:nowrap;animation:txMarquee 28s linear infinite}
+.tx-announce-track span{opacity:.92}
+.tx-announce-track b{color:#ffd9e6}
+@keyframes txMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.tx-announce-track{animation:none}}
+
+.tx-header{
+  background:rgba(255,248,245,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--tx-line);
+}
+.tx-header-inner{
+  width:min(1180px,92vw);margin:0 auto;display:flex;align-items:center;gap:26px;
+  padding:14px 0;
+}
+.tx-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;letter-spacing:.5px;color:var(--tx-plum)}
+.tx-logo-mark{
+  width:38px;height:38px;border-radius:12px;
+  background:radial-gradient(circle at 30% 25%,#ff9fbd,var(--tx-pink) 65%,var(--tx-pink-deep));
+  display:grid;place-items:center;color:#fff;font-size:17px;font-weight:900;
+  box-shadow:0 8px 18px -8px rgba(232,98,140,.9);
+}
+.tx-logo small{font-size:11px;font-weight:500;color:var(--tx-muted);letter-spacing:2px;display:block;line-height:1}
+.tx-nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.tx-nav a{
+  padding:7px 13px;border-radius:9px;font-size:14.5px;color:#5b4453;transition:.22s;
+}
+.tx-nav a:hover{background:var(--tx-soft);color:var(--tx-pink-deep)}
+.tx-search{
+  display:flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--tx-line);
+  border-radius:999px;padding:5px 6px 5px 14px;min-width:200px;
+}
+.tx-search input{border:none;outline:none;background:none;width:100%;font-size:13.5px;color:var(--tx-ink)}
+.tx-search input::placeholder{color:#b9a3ae}
+.tx-search-btn{
+  flex:0 0 auto;background:var(--tx-pink);color:#fff;border-radius:999px;
+  font-size:12.5px;padding:6px 13px;transition:.2s;
+}
+.tx-search-btn:hover{background:var(--tx-pink-deep)}
+.tx-burger{display:none;flex-direction:column;gap:4px;padding:8px}
+.tx-burger span{width:22px;height:2px;background:var(--tx-plum);border-radius:2px;transition:.25s}
+.tx-nav-open .tx-burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.tx-nav-open .tx-burger span:nth-child(2){opacity:0}
+.tx-nav-open .tx-burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.tx-search-feedback{
+  display:none;width:min(1180px,92vw);margin:0 auto;padding:0 0 10px;font-size:13px;color:var(--tx-pink-deep);
+}
+.tx-search-feedback.tx-show{display:block}
+
+/* ---------- 首屏 ---------- */
+.tx-hero{padding:52px 0 64px;background:linear-gradient(180deg,#fff6f9,#fff8f5 70%)}
+.tx-hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
+.tx-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;background:var(--tx-soft);color:var(--tx-pink-deep);
+  font-size:12.5px;font-weight:600;padding:5px 13px;border-radius:999px;letter-spacing:.8px;
+}
+.tx-eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--tx-pink)}
+.tx-hero h1{
+  font-size:clamp(38px,6vw,64px);line-height:1.12;letter-spacing:1px;margin:18px 0 8px;color:var(--tx-plum);
+}
+.tx-hero h1 em{font-style:normal;color:var(--tx-pink)}
+.tx-hero-sub{font-size:17px;color:#6b5160;font-weight:600;margin-bottom:16px}
+.tx-hero-desc{font-size:15px;color:#5f4a57;max-width:560px}
+.tx-hero-actions{display:flex;gap:12px;margin:26px 0 30px;flex-wrap:wrap}
+.tx-btn{
+  display:inline-flex;align-items:center;gap:8px;border-radius:12px;padding:12px 24px;
+  font-size:15px;font-weight:600;transition:.24s;border:1px solid transparent;
+}
+.tx-btn-primary{background:var(--tx-pink);color:#fff;box-shadow:0 14px 26px -14px rgba(232,98,140,.95)}
+.tx-btn-primary:hover{background:var(--tx-pink-deep);transform:translateY(-2px)}
+.tx-btn-ghost{border-color:#ecc9d6;color:var(--tx-pink-deep);background:#fff}
+.tx-btn-ghost:hover{background:var(--tx-soft);transform:translateY(-2px)}
+.tx-stats{display:flex;gap:34px;flex-wrap:wrap}
+.tx-stat b{display:block;font-size:26px;color:var(--tx-plum);letter-spacing:.5px}
+.tx-stat span{font-size:12.5px;color:var(--tx-muted)}
+.tx-hero-visual{position:relative}
+.tx-hero-visual .tx-hero-shot{
+  border-radius:24px;overflow:hidden;box-shadow:var(--tx-shadow);border:6px solid #fff;
+  transform:rotate(1.4deg);
+}
+.tx-hero-visual .tx-hero-shot img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.tx-hero-float{
+  position:absolute;left:-16px;bottom:-22px;background:#fff;border-radius:16px;padding:12px 16px;
+  box-shadow:0 16px 30px -18px rgba(58,31,51,.5);display:flex;align-items:center;gap:10px;
+  transform:rotate(-1.4deg);
+}
+.tx-hero-float .tx-mini-dot{width:10px;height:10px;border-radius:50%;background:#38b48b;box-shadow:0 0 0 4px #e2f6ee}
+.tx-hero-float p{font-size:12.5px;color:#5f4a57;line-height:1.4}
+.tx-hero-float b{display:block;font-size:14px;color:var(--tx-plum)}
+
+/* ---------- 通用区块头 ---------- */
+.tx-section{padding:64px 0}
+.tx-section.alt{background:#fff}
+.tx-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:34px;flex-wrap:wrap}
+.tx-sec-head h2{font-size:clamp(23px,3vw,30px);color:var(--tx-plum);letter-spacing:.6px;position:relative;padding-left:16px}
+.tx-sec-head h2::before{
+  content:"";position:absolute;left:0;top:8px;bottom:8px;width:5px;border-radius:4px;
+  background:linear-gradient(180deg,var(--tx-pink),var(--tx-gold));
+}
+.tx-sec-head p{font-size:14px;color:var(--tx-muted);max-width:520px}
+.tx-sec-tag{font-size:12px;color:var(--tx-pink-deep);background:var(--tx-soft);padding:4px 11px;border-radius:999px}
+
+/* ---------- 深度解析 ---------- */
+.tx-about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px}
+.tx-about-side{background:linear-gradient(160deg,#fff,#fff4f8);border:1px solid var(--tx-line);border-radius:20px;padding:26px;height:fit-content;position:sticky;top:150px}
+.tx-about-side h3{font-size:17px;color:var(--tx-plum);margin-bottom:10px}
+.tx-about-side ul{list-style:none;display:grid;gap:11px;margin-top:6px}
+.tx-about-side li{font-size:13.5px;color:#5f4a57;display:flex;gap:9px}
+.tx-about-side li::before{content:"◆";color:var(--tx-pink);font-size:10px;line-height:1.9}
+.tx-about-body p{font-size:15px;color:#4e3b47;margin-bottom:16px;text-align:justify}
+.tx-about-body h3{font-size:18px;color:var(--tx-plum);margin:22px 0 8px}
+.tx-quote{
+  border-left:4px solid var(--tx-pink);background:var(--tx-soft);border-radius:0 14px 14px 0;
+  padding:16px 20px;font-size:14.5px;color:#5f3f4f;margin:20px 0;
+}
+
+/* ---------- 焦点视频 ---------- */
+.tx-focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:24px}
+.tx-video-card{
+  background:#fff;border:1px solid var(--tx-line);border-radius:18px;overflow:hidden;
+  transition:transform .26s,box-shadow .26s;display:flex;flex-direction:column;
+}
+.tx-video-card:hover{transform:translateY(-5px);box-shadow:var(--tx-shadow)}
+.tx-thumb{position:relative;overflow:hidden;background:#f4e7ed}
+.tx-thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s}
+.tx-video-card:hover .tx-thumb img{transform:scale(1.05)}
+.tx-thumb-badge{
+  position:absolute;left:10px;top:10px;background:rgba(58,31,51,.78);color:#ffe4ee;
+  font-size:11px;padding:3px 9px;border-radius:999px;backdrop-filter:blur(4px);
+}
+.tx-thumb-play{
+  position:absolute;right:10px;bottom:10px;width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.86);display:grid;place-items:center;color:var(--tx-pink-deep);
+  font-size:13px;box-shadow:0 6px 14px -6px rgba(0,0,0,.4);
+}
+.tx-thumb-dur{
+  position:absolute;left:10px;bottom:10px;background:rgba(44,31,40,.7);color:#fff;
+  font-size:11px;padding:2px 8px;border-radius:6px;
+}
+.tx-video-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
+.tx-video-body h3{font-size:15.5px;color:var(--tx-plum);line-height:1.5}
+.tx-video-body p{font-size:13px;color:var(--tx-muted);flex:1}
+.tx-meta{display:flex;align-items:center;gap:10px;font-size:12px;color:#8d7583;flex-wrap:wrap}
+.tx-avatar{
+  width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:700;flex:0 0 auto;
+}
+.tx-tags{display:flex;gap:6px;flex-wrap:wrap}
+.tx-tag{font-size:11px;color:var(--tx-pink-deep);background:var(--tx-soft);padding:2px 8px;border-radius:6px}
+.tx-card-actions{display:flex;align-items:center;gap:8px;border-top:1px dashed var(--tx-line);padding-top:11px;margin-top:4px}
+.tx-act{
+  display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:#8d7583;
+  padding:4px 9px;border-radius:8px;transition:.2s;
+}
+.tx-act:hover{background:var(--tx-soft);color:var(--tx-pink-deep)}
+.tx-act.tx-active{color:var(--tx-pink-deep);font-weight:600}
+.tx-act.tx-saved{color:var(--tx-gold)}
+.tx-focus-small{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.tx-focus-small .tx-video-card{border-radius:14px}
+.tx-focus-small .tx-video-body h3{font-size:13.5px}
+.tx-focus-small .tx-video-body p{font-size:12px}
+
+/* ---------- 视频流 ---------- */
+.tx-stream{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tx-stream .tx-video-card{border-radius:16px}
+
+/* ---------- 专题 ---------- */
+.tx-topics{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tx-topic{
+  position:relative;border-radius:18px;overflow:hidden;min-height:250px;color:#fff;
+  display:flex;flex-direction:column;justify-content:flex-end;padding:20px;isolation:isolate;
+  transition:transform .28s;
+}
+.tx-topic:hover{transform:translateY(-5px)}
+.tx-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.tx-topic::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(44,31,40,.05),rgba(44,31,40,.82));
+}
+.tx-topic h3{font-size:16.5px;margin-bottom:6px}
+.tx-topic p{font-size:12.5px;opacity:.88;line-height:1.6}
+.tx-topic-state{
+  display:inline-block;align-self:flex-start;margin-bottom:auto;font-size:11px;
+  background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);
+  padding:2px 9px;border-radius:999px;backdrop-filter:blur(4px);
+}
+
+/* ---------- 创作者 ---------- */
+.tx-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tx-creator{
+  background:#fff;border:1px solid var(--tx-line);border-radius:18px;padding:22px 18px;
+  text-align:center;transition:.26s;
+}
+.tx-creator:hover{transform:translateY(-5px);box-shadow:var(--tx-shadow);border-color:#f3c4d5}
+.tx-creator .tx-big-avatar{
+  width:66px;height:66px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;
+  color:#fff;font-size:23px;font-weight:800;box-shadow:0 10px 20px -12px rgba(58,31,51,.6);
+}
+.tx-creator h3{font-size:15.5px;color:var(--tx-plum)}
+.tx-creator .tx-field{font-size:12px;color:var(--tx-pink-deep);margin:3px 0 8px}
+.tx-creator p{font-size:12.5px;color:var(--tx-muted);min-height:52px}
+.tx-creator .tx-creator-nums{display:flex;justify-content:center;gap:16px;font-size:11.5px;color:#9c8492;margin-top:10px}
+.tx-creator-nums b{color:var(--tx-plum);font-size:13px;display:block}
+
+/* ---------- 评论 ---------- */
+.tx-comments{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tx-comment{
+  background:#fff;border:1px solid var(--tx-line);border-radius:16px;padding:18px;position:relative;
+}
+.tx-comment::before{
+  content:"“";position:absolute;right:16px;top:2px;font-size:44px;color:#f4d7e2;font-family:Georgia,serif;
+}
+.tx-comment p{font-size:13.5px;color:#52404b;margin-bottom:12px;position:relative;z-index:1}
+.tx-comment .tx-c-user{display:flex;align-items:center;gap:8px;font-size:12px;color:#8d7583}
+.tx-comment .tx-c-user b{color:var(--tx-plum);font-size:13px}
+
+/* ---------- 动态 ---------- */
+.tx-log{display:grid;gap:0;border-left:2px solid var(--tx-line);margin-left:8px;padding-left:26px}
+.tx-log-item{position:relative;padding:0 0 26px}
+.tx-log-item::before{
+  content:"";position:absolute;left:-33px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:var(--tx-pink);border:3px solid #fff;box-shadow:0 0 0 2px var(--tx-pink);
+}
+.tx-log-item time{font-size:12px;color:var(--tx-pink-deep);font-weight:600;letter-spacing:.5px}
+.tx-log-item h3{font-size:15.5px;color:var(--tx-plum);margin:4px 0}
+.tx-log-item p{font-size:13px;color:var(--tx-muted)}
+
+/* ---------- FAQ ---------- */
+.tx-faq{display:grid;gap:12px}
+.tx-faq details{
+  background:#fff;border:1px solid var(--tx-line);border-radius:14px;padding:15px 20px;
+  transition:.2s;
+}
+.tx-faq details[open]{border-color:#f0bed0;background:#fffafc;box-shadow:0 12px 24px -20px rgba(58,31,51,.6)}
+.tx-faq summary{
+  cursor:pointer;font-size:14.5px;font-weight:600;color:var(--tx-plum);list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.tx-faq summary::-webkit-details-marker{display:none}
+.tx-faq summary::after{content:"+";color:var(--tx-pink);font-size:19px;line-height:1;transition:.2s}
+.tx-faq details[open] summary::after{content:"–"}
+.tx-faq details p{font-size:13.5px;color:#5f4a57;margin-top:10px;padding-top:10px;border-top:1px dashed var(--tx-line)}
+
+/* ---------- 联系 ---------- */
+.tx-contact{
+  background:linear-gradient(135deg,#3a1f33,#5a2c48 60%,#8c3a5e);color:#ffe9f1;
+  border-radius:26px;padding:44px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;
+}
+.tx-contact h2{font-size:25px;margin-bottom:10px;letter-spacing:.7px}
+.tx-contact p{font-size:14px;color:#f3d5e1;margin-bottom:18px}
+.tx-contact-list{list-style:none;display:grid;gap:10px;font-size:13.5px;color:#f7e0ea}
+.tx-contact-list b{color:#fff}
+.tx-contact-form{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:22px}
+.tx-contact-form h3{font-size:16px;margin-bottom:12px}
+.tx-contact-form input,.tx-contact-form textarea{
+  width:100%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:10px;
+  padding:10px 13px;font-size:13px;color:#fff;margin-bottom:10px;outline:none;
+}
+.tx-contact-form input::placeholder,.tx-contact-form textarea::placeholder{color:#e8bfd1}
+.tx-contact-form input:focus,.tx-contact-form textarea:focus{border-color:#ffb8d1;background:rgba(255,255,255,.16)}
+.tx-contact-form textarea{resize:vertical;min-height:76px}
+.tx-contact-form button{
+  width:100%;background:#ffd9e6;color:#7a2c4a;font-weight:700;border-radius:10px;padding:11px;
+  font-size:14px;transition:.2s;
+}
+.tx-contact-form button:hover{background:#fff}
+
+/* ---------- 页脚 ---------- */
+.tx-footer{background:#2c1f28;color:#cdb7c2;padding:50px 0 26px;margin-top:0}
+.tx-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:32px}
+.tx-footer h3{font-size:14px;color:#ffe9f1;margin-bottom:13px;letter-spacing:.6px}
+.tx-footer p,.tx-footer li{font-size:12.5px;line-height:1.9;list-style:none}
+.tx-footer a:hover{color:#ffb8d1}
+.tx-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:#fff;font-weight:700;font-size:18px}
+.tx-footer-bottom{border-top:1px solid #44323d;padding-top:18px;font-size:12px;color:#9c8492;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- 浮动 ---------- */
+.tx-to-top{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:14px;
+  background:var(--tx-pink);color:#fff;display:grid;place-items:center;font-size:18px;
+  box-shadow:0 16px 30px -14px rgba(232,98,140,.95);opacity:0;pointer-events:none;transition:.28s;z-index:70;
+}
+.tx-to-top.tx-show{opacity:1;pointer-events:auto}
+.tx-to-top:hover{background:var(--tx-pink-deep);transform:translateY(-3px)}
+.tx-toast{
+  position:fixed;left:50%;bottom:36px;transform:translate(-50%,20px);background:#3a1f33;color:#ffe9f1;
+  font-size:13.5px;padding:11px 22px;border-radius:999px;box-shadow:0 18px 34px -16px rgba(0,0,0,.6);
+  opacity:0;pointer-events:none;transition:.3s;z-index:120;
+}
+.tx-toast.tx-show{opacity:1;transform:translate(-50%,0)}
+.tx-modal{
+  position:fixed;inset:0;background:rgba(44,31,40,.55);backdrop-filter:blur(3px);
+  display:none;place-items:center;z-index:110;padding:20px;
+}
+.tx-modal.tx-open{display:grid}
+.tx-modal-box{
+  background:#fff;border-radius:20px;padding:28px;width:min(460px,94vw);position:relative;
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.6);
+}
+.tx-modal-box h3{font-size:18px;color:var(--tx-plum);margin-bottom:8px}
+.tx-modal-box p{font-size:13.5px;color:var(--tx-muted);margin-bottom:16px}
+.tx-modal-box input{
+  width:100%;border:1px solid var(--tx-line);border-radius:10px;padding:10px 13px;font-size:13.5px;outline:none;
+}
+.tx-modal-box input:focus{border-color:var(--tx-pink)}
+.tx-modal-box .tx-modal-ok{
+  width:100%;margin-top:12px;background:var(--tx-pink);color:#fff;border-radius:10px;padding:11px;font-weight:600;font-size:14px;
+}
+.tx-modal-close{position:absolute;right:14px;top:10px;font-size:22px;color:#b9a3ae;line-height:1}
+.tx-modal-close:hover{color:var(--tx-pink-deep)}
+
+@media (max-width:960px){
+  .tx-hero-grid,.tx-about-grid,.tx-focus-grid,.tx-contact{grid-template-columns:1fr}
+  .tx-about-side{position:static}
+  .tx-creators{grid-template-columns:repeat(2,1fr)}
+  .tx-topics{grid-template-columns:repeat(2,1fr)}
+  .tx-stream{grid-template-columns:repeat(2,1fr)}
+  .tx-comments{grid-template-columns:1fr 1fr}
+  .tx-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .tx-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;
+    padding:12px 5vw;border-bottom:1px solid var(--tx-line);box-shadow:0 18px 30px -22px rgba(58,31,51,.6);
+  }
+  .tx-nav-open .tx-nav{display:flex}
+  .tx-header-inner{position:relative;flex-wrap:wrap;gap:12px}
+  .tx-burger{display:flex;margin-left:auto}
+  .tx-search{order:3;width:100%;min-width:0}
+  .tx-focus-small{grid-template-columns:1fr}
+  .tx-stream{grid-template-columns:1fr}
+  .tx-comments{grid-template-columns:1fr}
+  .tx-hero-actions .tx-btn{flex:1;justify-content:center}
+  .tx-stats{gap:22px}
+  .tx-contact{padding:28px 20px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="tx-sticky-wrap">
+  <div class="tx-announce">
+    <div class="tx-announce-inner">
+      <span class="tx-announce-tag">官方发布</span>
+      <div class="tx-announce-track">
+        <span><b>11月18日</b> 冬季影像企划「糖心日记」开放报名，首批 60 位创作者入驻</span>
+        <span><b>11月15日</b> 新版剪辑模板库上线，新增 42 套原创转场</span>
+        <span><b>11月12日</b> 糖心vl 品牌故事片《甜度刚好》官方首映</span>
+        <span><b>11月18日</b> 冬季影像企划「糖心日记」开放报名，首批 60 位创作者入驻</span>
+        <span><b>11月15日</b> 新版剪辑模板库上线，新增 42 套原创转场</span>
+        <span><b>11月12日</b> 糖心vl 品牌故事片《甜度刚好》官方首映</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="tx-header" id="tx-top">
+    <div class="tx-header-inner">
+      <a class="tx-logo" href="#tx-top">
+        <span class="tx-logo-mark">糖</span>
+        <span>糖心vl<small>TANGXIN VL</small></span>
+      </a>
+      <button class="tx-burger" id="txBurger" aria-label="展开导航" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="tx-nav" id="txNav">
+        <a href="#tx-about">品牌解析</a>
+        <a href="#tx-focus">焦点内容</a>
+        <a href="#tx-stream">影像流</a>
+        <a href="#tx-topics">专题企划</a>
+        <a href="#tx-creators">创作者</a>
+        <a href="#tx-dynamics">企业动态</a>
+        <a href="#tx-faq">帮助</a>
+        <a href="#tx-contact">联系我们</a>
+      </nav>
+      <div class="tx-search">
+        <input type="search" id="txSearchInput" placeholder="搜索内容、创作者或专题" aria-label="站内搜索">
+        <button class="tx-search-btn" id="txSearchBtn">搜索</button>
+      </div>
+    </div>
+    <div class="tx-search-feedback" id="txSearchFeedback" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<main>
+  <!-- 首屏 -->
+  <section class="tx-hero" aria-label="品牌首屏">
+    <div class="tx-container tx-hero-grid">
+      <div>
+        <span class="tx-eyebrow">糖心vl 官方网站 · 原创影像社区</span>
+        <h1>糖心vl</h1>
+        <p class="tx-hero-sub">用影像记录真实，用甜度治愈日常</p>
+        <p class="tx-hero-desc">
+          糖心vl 是一家专注原创生活影像的视频品牌，深耕情感记录、日常美学与创作幕后领域。我们相信，每一段真实的生活都值得被认真拍摄、被温柔保存。作为持续运营的企业级内容平台，糖心vl 以专业制作标准与开放社区生态，陪伴创作者把平凡日子拍成有力量的作品。
+        </p>
+        <div class="tx-hero-actions">
+          <a class="tx-btn tx-btn-primary" href="#tx-focus">浏览焦点内容</a>
+          <a class="tx-btn tx-btn-ghost" href="#tx-contact" id="txSubmitOpen">投稿与报名</a>
+        </div>
+        <div class="tx-stats">
+          <div class="tx-stat"><b data-count="2860">0</b><span>原创影像作品</span></div>
+          <div class="tx-stat"><b data-count="412">0</b><span>签约创作者</span></div>
+          <div class="tx-stat"><b data-count="97">0</b><span>内容好评率（%）</span></div>
+        </div>
+      </div>
+      <div class="tx-hero-visual">
+        <div class="tx-hero-shot">
+          <img alt="糖心vl 品牌主视觉：暖粉色影棚中的创作者手持相机记录生活" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd7e6'/%3E%3Cstop offset='.55' stop-color='%23f28bb0'/%3E%3Cstop offset='1' stop-color='%23a83a63'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23fff5e0' stop-opacity='.9'/%3E%3Cstop offset='1' stop-color='%23ffd7e6' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g1)'/%3E%3Ccircle cx='640' cy='120' r='150' fill='url(%23g2)'/%3E%3Ccircle cx='150' cy='510' r='180' fill='%23ffffff' opacity='.12'/%3E%3Cg opacity='.9'%3E%3Crect x='130' y='250' width='250' height='170' rx='18' fill='%23fff8f5'/%3E%3Crect x='150' y='270' width='210' height='120' rx='10' fill='%233a1f33'/%3E%3Ccircle cx='255' cy='330' r='38' fill='%23e8628c'/%3E%3Cpath d='M238 330l14 14 26-28' stroke='%23fff8f5' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='190' y='420' width='130' height='18' rx='9' fill='%23c23f6a'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='545' cy='330' r='58' fill='%23fff8f5'/%3E%3Ccircle cx='545' cy='312' r='22' fill='%23c23f6a'/%3E%3Cpath d='M505 382c8-26 24-38 40-38s32 12 40 38z' fill='%23c23f6a'/%3E%3Crect x='470' y='410' width='150' height='14' rx='7' fill='%23ffffff' opacity='.6'/%3E%3Crect x='500' y='436' width='90' height='12' rx='6' fill='%23ffffff' opacity='.4'/%3E%3C/g%3E%3Cg stroke='%23fff8f5' stroke-width='3' fill='none' opacity='.55'%3E%3Cpath d='M60 90h90v70H60z'/%3E%3Cpath d='M700 470l60 40'/%3E%3Cpath d='M660 500l40-50'/%3E%3C/g%3E%3C/svg%3E">
+        </div>
+        <div class="tx-hero-float">
+          <span class="tx-mini-dot"></span>
+          <p><b>本周新增 128 条原创</b>糖心vl 社区持续更新中</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌解析 -->
+  <section class="tx-section" id="tx-about">
+    <div class="tx-container">
+      <div class="tx-sec-head">
+        <h2>关于糖心vl：品牌定位与深度解析</h2>
+        <p>从一间小型剪辑工作室，到具备完整内容生态的影像品牌，糖心vl 用六年时间回答了“日常影像到底能走多远”。</p>
+      </div>
+      <div class="tx-about-grid">
+        <aside class="tx-about-side">
+          <h3>品牌关键词</h3>
+          <ul>
+            <li>真实记录 · 温柔表达</li>
+            <li>原创正版 · 高清制作</li>
+            <li>垂直领域 · 情感与生活</li>
+            <li>企业级内容生态</li>
+            <li>创作者优先的社区机制</li>
+            <li>持续运营 · 值得信赖</li>
+          </ul>
+        </aside>
+        <div class="tx-about-body">
+          <p>糖心vl 是一个以原创影像为核心的内容品牌，官方网站于 2020 年正式上线，定位为“生活影像的甜度工厂”。我们不做宏大的叙事，而是把镜头对准厨房里的一碗汤、通勤路上的黄昏、朋友聚会时突然安静下来的三秒钟。糖心vl 判断一条内容是否成立的标准很简单：它是否让看的人感到真实、被理解，甚至获得一点点继续生活的力量。</p>
+          <p>在过去六年中，糖心vl 从单一的情感短片频道，逐渐生长为一个多元、包容的内容生态。目前平台设有日常记录、经验分享、深度测评、人物访谈、创作幕后与城市探索等六个主要方向，签约创作者超过四百位，累计发布原创影像两千八百余条。所有内容均经过人工审核与画质抽检，坚持正版授权与高清呈现，这也是糖心vl 能够积累口碑、成为用户首选影像社区的根本原因。</p>
+          <h3>我们如何理解“糖心”</h3>
+          <p>“糖心”在果品里指的是熟透后中心呈现半透明甜润的那一层，它不是一个外在标签，而是从内部慢慢长成的甜。糖心vl 以此为品牌隐喻：好的影像不是包装出来的，而是创作者把生活过透了之后自然流出的部分。所以我们鼓励创作者慢一点，允许他们拍失败的素材，允许他们花三个月只做好一条三分钟的片子，也允许他们不追逐热点。</p>
+          <blockquote class="tx-quote">糖心vl 的品牌使命是：为每一位认真生活的人，提供一套专业但不高冷的影像表达工具，以及一个愿意认真看完的观众社区。</blockquote>
+          <h3>企业级的内容标准</h3>
+          <p>糖心vl 建立了三层内容品控机制：创作阶段的基础规范指导、发布前的画质与版权审查、上线后的用户反馈回访。在技术层面，平台为创作者提供统一的调色参考、字幕样式与声音响度建议，使不同设备拍摄的作品在糖心vl 上都能获得接近的观看体验。这套标准不追求工业化的一致，而是希望减少技术噪音，让内容本身被看见。</p>
+          <h3>社区与生态</h3>
+          <p>糖心vl 的社区文化可以概括为“不评判、给建议、多陪伴”。我们设有新人扶持计划、季度创作挑战与年度影像评选，同时保留了大量非榜单化的展示位，让没有粉丝积累的创作者也有机会被首页推荐。行业领先的审核响应速度与透明的申诉通道，让糖心vl 在创作者群体中建立了稳定的信任。我们始终认为，平台的长期价值不在于一时流量，而在于是否能让创作者愿意留下来，年复一年地拍下去。</p>
+          <p>面向未来，糖心vl 将继续深耕生活影像这一垂直领域，拓展线下放映、创作工作坊与品牌联名企划，同时强化社会责任实践——包括青少年影像教育公益课程与城市记忆档案计划。我们希望糖心vl 不仅是一个品牌官网，更是一份关于“如何认真生活”的长期答卷。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="tx-section alt" id="tx-focus">
+    <div class="tx-container">
+      <div class="tx-sec-head">
+        <div>
+          <h2>焦点内容 · 本周主推</h2>
+          <p>由糖心vl 编辑部与社区共同选出的重点推荐，覆盖品牌故事、人物访谈与生活记录。</p>
+        </div>
+        <span class="tx-sec-tag">官方精选</span>
+      </div>
+      <div class="tx-focus-grid">
+        <article class="tx-video-card">
+          <div class="tx-thumb">
+            <img alt="焦点视频封面：糖心vl 品牌故事片《甜度刚好》主视觉海报" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233a1f33'/%3E%3Cstop offset='.5' stop-color='%238c3a5e'/%3E%3Cstop offset='1' stop-color='%23e8628c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23f1)'/%3E%3Ccircle cx='610' cy='130' r='110' fill='%23ffd7e6' opacity='.28'/%3E%3Ccircle cx='610' cy='130' r='60' fill='%23fff8f5' opacity='.5'/%3E%3Cg fill='%23fff8f5' opacity='.9'%3E%3Crect x='90' y='250' width='290' height='16' rx='8'/%3E%3Crect x='90' y='286' width='200' height='12' rx='6' opacity='.6'/%3E%3Crect x='90' y='316' width='240' height='12' rx='6' opacity='.4'/%3E%3C/g%3E%3Cpath d='M120 90h130v90H120z' fill='none' stroke='%23ffd7e6' stroke-width='3' opacity='.5'/%3E%3C/svg%3E">
+            <span class="tx-thumb-badge">品牌故事</span>
+            <span class="tx-thumb-dur">12:48</span>
+            <span class="tx-thumb-play" aria-hidden="true">▶</span>
+          </div>
+          <div class="tx-video-body">
+            <h3>《甜度刚好》：糖心vl 六周年品牌故事片</h3>
+            <p>从一间不足二十平方米的剪辑室出发，回看糖心vl 六年里被删掉的三百多个镜头，以及最终留下来的那一个瞬间。</p>
+            <div class="tx-meta">
+              <span class="tx-avatar" style="background:#c23f6a">糖</span>
+              <span>糖心vl 官方</span>
+              <span>· 11月12日</span>
+            </div>
+            <div class="tx-tags"><span class="tx-tag">品牌故事</span><span class="tx-tag">官方发布</span><span class="tx-tag">六周年</span></div>
+            <div class="tx-card-actions">
+              <button class="tx-act" data-like="1">♡ <span>2.4万</span></button>
+              <button class="tx-act" data-save="1">☆ 收藏</button>
+              <button class="tx-act" data-share="甜度刚好：糖心vl 六周年品牌故事片">↗ 分享</button>
+            </div>
+          </div>
+        </article>
+        <div class="tx-focus-small">
+          <article class="tx-video-card">
+            <div class="tx-thumb">
+              <img alt="焦点视频封面：创作者林晚的厨房访谈现场" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='f2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffe8d6'/%3E%3Cstop offset='1' stop-color='%23e8a06a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23f2)'/%3E%3Crect x='0' y='250' width='640' height='110' fill='%23a35d34' opacity='.55'/%3E%3Ccircle cx='320' cy='160' r='58' fill='%23fff8f5'/%3E%3Cpath d='M270 250c10-40 30-58 50-58s40 18 50 58z' fill='%23fff8f5'/%3E%3Ccircle cx='320' cy='150' r='22' fill='%23c08050'/%3E%3Crect x='60' y='60' width='130' height='12' rx='6' fill='%23ffffff' opacity='.7'/%3E%3C/svg%3E">
+              <span class="tx-thumb-badge">人物访谈</span>
+              <span class="tx-thumb-dur">08:15</span>
+            </div>
+            <div class="tx-video-body">
+              <h3>林晚：厨房是我最早的摄影棚</h3>
+              <p>专访糖心vl 签约创作者林晚，聊她如何用一口铁锅拍出四十万次收藏。</p>
+              <div class="tx-meta"><span class="tx-avatar" style="background:#e8a06a">林</span><span>糖心访谈</span></div>
+              <div class="tx-card-actions">
+                <button class="tx-act" data-like="2">♡ <span>9862</span></button>
+                <button class="tx-act" data-save="2">☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+          <article class="tx-video-card">
+            <div class="tx-thumb">
+              <img alt="焦点视频封面：清晨城市街角的通勤记录影像" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='f3' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23bcd6ea'/%3E%3Cstop offset='1' stop-color='%23f4dbe2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23f3)'/%3E%3Crect x='40' y='120' width='120' height='180' fill='%23556a86' opacity='.7'/%3E%3Crect x='180' y='80' width='140' height='220' fill='%23455a76' opacity='.8'/%3E%3Crect x='340' y='140' width='100' height='160' fill='%235e7490' opacity='.7'/%3E%3Crect x='460' y='100' width='140' height='200' fill='%234f647f' opacity='.75'/%3E%3Ccircle cx='520' cy='80' r='40' fill='%23ffe4b5' opacity='.9'/%3E%3Crect x='0' y='300' width='640' height='60' fill='%233a4a62' opacity='.8'/%3E%3C/svg%3E">
+              <span class="tx-thumb-badge">城市探索</span>
+              <span class="tx-thumb-dur">06:32</span>
+            </div>
+            <div class="tx-video-body">
+              <h3>六点半的城市，有另一种甜度</h3>
+              <p>跟拍三位早起的人，记录糖心vl「清晨计划」的第一支城市影像。</p>
+              <div class="tx-meta"><span class="tx-avatar" style="background:#5e7490">周</span><span>周屿</span></div>
+              <div class="tx-card-actions">
+                <button class="tx-act" data-like="3">♡ <span>1.1万</span></button>
+                <button class="tx-act" data-save="3">☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+          <article class="tx-video-card">
+            <div class="tx-thumb">
+              <img alt="焦点视频封面：剪辑台上的时间线与调色面板特写" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%2328202c'/%3E%3Crect x='40' y='40' width='560' height='130' rx='10' fill='%233a2f3f'/%3E%3Crect x='40' y='190' width='560' height='60' rx='8' fill='%233a2f3f'/%3E%3Crect x='56' y='204' width='120' height='32' rx='6' fill='%23e8628c'/%3E%3Crect x='186' y='204' width='80' height='32' rx='6' fill='%23f0b429'/%3E%3Crect x='276' y='204' width='160' height='32' rx='6' fill='%238c3a5e'/%3E%3Crect x='446' y='204' width='90' height='32' rx='6' fill='%235e7490'/%3E%3Crect x='40' y='270' width='380' height='50' rx='8' fill='%233a2f3f'/%3E%3Ccircle cx='64' cy='295' r='12' fill='%23e8628c'/%3E%3Crect x='440' y='270' width='160' height='50' rx='8' fill='%233a2f3f'/%3E%3C/svg%3E">
+              <span class="tx-thumb-badge">创作幕后</span>
+              <span class="tx-thumb-dur">15:02</span>
+            </div>
+            <div class="tx-video-body">
+              <h3>一条三分钟短片，我们剪了四十七天</h3>
+              <p>糖心vl 后期团队完整复盘，从素材管理到最终混音的每一步取舍。</p>
+              <div class="tx-meta"><span class="tx-avatar" style="background:#8c3a5e">后</span><span>后期组</span></div>
+              <div class="tx-card-actions">
+                <button class="tx-act" data-like="4">♡ <span>6720</span></button>
+                <button class="tx-act" data-save="4">☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影像流 -->
+  <section class="tx-section" id="tx-stream">
+    <div class="tx-container">
+      <div class="tx-sec-head">
+        <div>
+          <h2>人气影像流</h2>
+          <p>糖心vl 社区近期热度较高的原创作品，涵盖日常记录、实用技巧、美食烹饪与健康运动等方向。</p>
+        </div>
+        <span class="tx-sec-tag">每周更新</span>
+      </div>
+      <div class="tx-stream">
+        <article class="tx-video-card">
+          <div class="tx-thumb">
+            <img alt="影像封面：窗边一杯手冲咖啡的晨光记录" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='s1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23fff2e0'/%3E%3Cstop offset='1' stop-color='%23e0b088'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23s1)'/%3E%3Crect x='230' y='130' width='180' height='150' rx='18' fill='%23fffdf8'/%3E%3Cpath d='M410 170h40a35 35 0 010 70h-40z' fill='none' stroke='%23fffdf8' stroke-width='10'/%3E%3Crect x='250' y='160' width='140' height='30' rx='10' fill='%236b4633'/%3E%3Crect x='0' y='300' width='640' height='60' fill='%23c99a72' opacity='.55'/%3E%3Ccircle cx='510' cy='90' r='46' fill='%23ffffff' opacity='.5'/%3E%3C/svg%3E">
+            <span class="tx-thumb-badge">日常记录</span>
+            <span class="tx-thumb-dur">05:20</span>
+          </div>
+          <div class="tx-video-body">
+            <h3>把早晨还给自己：一个人的手冲十分钟</h3>
+            <p>不赶时间的早晨，从磨豆声开始。记录三个月的晨间仪式，附完整器具清单。</p>
+            <div class="tx-meta"><span class="tx-avatar" style="background:#c99a72">苏</span><span>苏禾</span><span>· 11月16日</span></div>
+            <div class="tx-tags"><span class="tx-tag">生活方式</span><span class="tx-tag">治愈影像</span></div>
+            <div class="tx-card-actions">
+              <button class="tx-act" data-like="5">♡ <span>4321</span></button>
+              <button class="tx-act" data-save="5">☆ 收藏</button>
+              <button class="tx-act" data-comment="1">💬 评论</button>
+            </div>
+          </div>
+        </article>
+        <article class="tx-video-card">
+          <div class="tx-thumb">
+            <img alt="影像封面：家用小厨房里的番茄意面烹饪过程" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='s2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd9d2'/%3E%3Cstop offset='1' stop-color='%23c94b3c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23s2)'/%3E%3Ccircle cx='320' cy='200' r='110' fill='%23fff6ef'/%3E%3Ccircle cx='320' cy='200' r='80' fill='%23f2b95f'/%3E%3Ccircle cx='295' cy='180' r='24' fill='%23c94b3c'/%3E%3Ccircle cx='350' cy='215' r='18' fill='%23e0604a'/%3E%3Cpath d='M300 240c30-20 60-10 80 6' stroke='%23a33b2c' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='130' cy='80' r='36' fill='%23ffe2da' opacity='.7'/%3E%3Ccircle cx='520' cy='290' r='46' fill='%23ffe2da' opacity='.5'/%3E%3C/svg%3E">
+            <span class="tx-thumb-badge">美食烹饪</span>
+            <span class="tx-thumb-dur">09:44</span>
+          </div>
+          <div class="tx-video-body">
+            <h3>番茄意面的一百种心情：加班夜的十五分钟</h3>
+            <p>糖心vl 厨房系列第三期，教你用四种常备食材做出一份不会失败的深夜餐。</p>
+            <div class="tx-meta"><span class="tx-avatar" style="background:#c94b3c">林</span><span>林晚</span><span>· 11月14日</span></div>
+            <div class="tx-tags"><span class="tx-tag">教程干货</span><span class="tx-tag">实用技巧</span></div>
+            <div class="tx-card-actions">
+              <button class="tx-act" data-like="6">♡ <span>1.8万</span></button>
+              <button class="tx-act" data-save="6">☆ 收藏</button>
+              <button class="tx-act" data-comment="2">💬 评论</button>
+            </div>
+          </div>
+        </article>
+        <article class="tx-video-card">
+          <div class="tx-thumb">
+            <img alt="影像封面：公园跑道上的晨跑者与逆光树影" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='s3' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cfe8d8'/%3E%3Cstop offset='1' stop-color='%235f9a78'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23s3)'/%3E%3Cpath d='M0 300h640v60H0z' fill='%23d8b98c'/%3E%3Cpath d='M0 270c120-40 240-30 320 0s200 30 320-10v40H0z' fill='%2377a889'/%3E%3Ccircle cx='450' cy='90' r='44' fill='%23fff4cf' opacity='.9'/%3E%3Cg fill='%232f5c43'%3E%3Cellipse cx='120' cy='170' rx='40' ry='60'/%3E%3Cellipse cx='180' cy='150' rx='34' ry='50'/%3E%3C/g%3E%3Ccircle cx='330' cy='230' r='16' fill='%23fff8f5'/%3E%3Crect x='322' y='244' width='16' height='36' rx='8' fill='%23fff8f5'/%3E%3C/svg%3E">
+            <span class="tx-thumb-badge">健康运动</span>
+            <span class="tx-thumb-dur">07:08</span>
+          </div>
+          <div class="tx-video-body">
+            <h3>跑步第八十天：我拍下了自己的呼吸声</h3>
+            <p>从跑两百米就喘，到完成第一个五公里。这条片子里没有配乐，只有脚步。</p>
+            <div class="tx-meta"><span class="tx-avatar" style="background:#5f9a78">陈</span><span>陈野</span><span>· 11月13日</span></div>
+            <div class="tx-tags"><span class="tx-tag">健康运动</span><span class="tx-tag">成长</span></div>
+            <div class="tx-card-actions">
+              <button class="tx-act" data-like="7">♡ <span>7640</span></button>
+              <button class="tx-act" data-save="7">☆ 收藏</button>
+              <button class="tx-act" data-comment="3">💬 评论</button>
+            </div>
+          </div>
+        </article>
+        <article class="tx-video-card">
+          <div class="tx-thumb">
+            <img alt="影像封面：书桌上摊开的笔记本与老式录音笔" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23e9dfd2'/%3E%3Crect x='90' y='70' width='300' height='220' rx='8' fill='%23fffaf0' transform='rotate(-4 240 180)'/%3E%3Cg stroke='%23c9b8a2' stroke-width='5'%3E%3Cpath d='M130 130h200M130 165h220M130 200h170M130 235h190'/%3E%3C/g%3E%3Crect x='420' y='140' width='120' height='150' rx='14' fill='%233c4a58'/%3E%3Ccircle cx='480' cy='200' r='34' fill='%23a8b6c4'/%3E%3Crect x='455' y='255' width='50' height='12' rx='6' fill='%238b99a7'/%3E%3C/svg%3E">
+            <span class="tx-thumb-badge">人物访谈</span>
+            <span class="tx-thumb-dur">11:36</span>
+          </div>
+          <div class="tx-video-body">
+            <h3>她把外婆的口述史做成了二十集音频影像</h3>
+            <p>糖心vl 年度访谈：一位纪录片新人如何用手机完成家族记忆的抢救性记录。</p>
+            <div class="tx-meta"><span class="tx-avatar" style="background:#3c4a58">何</span><span>何知微</span><span>· 11月11日</span></div>
+            <div class="tx-tags"><span class="tx-tag">人物访谈</span><span class="tx-tag">情感故事</span></div>
+            <div class="tx-card-actions">
+              <button class="tx-act" data-like="8">♡ <span>1.2万</span></button>
+              <button class="tx-act" data-save="8">☆ 收藏</button>
+              <button class="tx-act" data-comment="4">💬 评论</button>
+            </div>
+          </div>
+        </article>
+        <article class="tx-video-card">
+          <div class="tx-thumb">
+            <img alt="影像封面：桌面上的手工陶土杯与拉坯工具" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='s4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f2e3d0'/%3E%3Cstop offset='1' stop-color='%23b98a63'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23s4)'/%3E%3Cpath d='M180 260c0-70 60-110 140-110s140 40 140 110z' fill='%23a87450'/%3E%3Cellipse cx='320' cy='260' rx='140' ry='26' fill='%238a5e40'/%3E%3Crect x='270' y='40' width='14' height='110' rx='7' fill='%23fff8f0'/%3E%3Crect x='350' y='60' width='12' height='90' rx='6' fill='%23fff8f0'/%3E%3Ccircle cx='320' cy='190' r='30' fill='%23e2c3a3'/%3E%3C/svg%3E">
+            <span class="tx-thumb-badge">手作DIY</span>
+            <span class="tx-thumb-dur">10:12</span>
+          </div>
+          <div class="tx-video-body">
+            <h3>第一次拉坯失败七次，第八次成了歪脖子杯</h3>
+            <p>糖心vl「笨手笨脚」企划，记录手作新手的完整失败清单与一点小骄傲。</p>
+            <div class="tx-meta"><span class="tx-avatar" style="background:#b98a63">钱</span><span>钱小满</span><span>· 11月10日</span></div>
+            <div class="tx-tags"><span class="tx-tag">手作DIY</span><span class="tx-tag">创作幕后</span></div>
+            <div class="tx-card-actions">
+              <button class="tx-act" data-like="9">♡ <span>5388</span></button>
+              <button class="tx-act" data-save="9">☆ 收藏</button>
+              <button class="tx-act" data-comment="5">💬 评论</button>
+            </div>
+          </div>
+        </article>
+        <article class="tx-video-card">
+          <div class="tx-thumb">
+            <img alt="影像封面：老式胶片相机与散落的底片，复古色调" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23c9b49a'/%3E%3Crect x='120' y='90' width='280' height='180' rx='16' fill='%234b4038'/%3E%3Ccircle cx='260' cy='180' r='62' fill='%23332b25'/%3E%3Ccircle cx='260' cy='180' r='42' fill='%236f8b93'/%3E%3Ccircle cx='260' cy='180' r='16' fill='%23cfe1e6'/%3E%3Crect x='330' y='110' width='46' height='22' rx='6' fill='%23a89b8d'/%3E%3Crect x='430' y='200' width='160' height='24' rx='6' fill='%233d3530' transform='rotate(8 510 212)'/%3E%3Crect x='440' y='240' width='140' height='20' rx='6' fill='%233d3530' transform='rotate(-6 510 250)'/%3E%3C/svg%3E">
+            <span class="tx-thumb-badge">装备测评</span>
+            <span class="tx-thumb-dur">13:26</span>
+          </div>
+          <div class="tx-video-body">
+            <h3>三台老胶片机横评：哪一台更适合拍生活</h3>
+            <p>糖心vl 器材组实测九卷胶片，从色彩倾向到操作手感给出具体建议。</p>
+            <div class="tx-meta"><span class="tx-avatar" style="background:#4b4038">器</span><span>器材组</span><span>· 11月9日</span></div>
+            <div class="tx-tags"><span class="tx-tag">深度测评</span><span class="tx-tag">高清</span></div>
+            <div class="tx-card-actions">
+              <button class="tx-act" data-like="10">♡ <span>3915</span></button>
+              <button class="tx-act" data-save="10">☆ 收藏</button>
+              <button class="tx-act" data-comment="6">💬 评论</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题 -->
+  <section class="tx-section alt" id="tx-topics">
+    <div class="tx-container">
+      <div class="tx-sec-head">
+        <div>
+          <h2>专题企划</h2>
+          <p>糖心vl 每季度推出的主题性内容合集，围绕一个具体命题展开持续记录与共创。</p>
+        </div>
+        <span class="tx-sec-tag">报名进行中</span>
+      </div>
+      <div class="tx-topics">
+        <article class="tx-topic">
+          <img alt="专题封面：冬日窗台上的热饮与暖光" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd6c4'/%3E%3Cstop offset='1' stop-color='%238c3a5e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='500' fill='url(%23t1)'/%3E%3Crect x='110' y='250' width='180' height='150' rx='16' fill='%23fff4ef'/%3E%3Cpath d='M290 290h26a40 40 0 010 70h-26z' fill='none' stroke='%23fff4ef' stroke-width='12'/%3E%3Cpath d='M170 220c0-24 20-30 20-54M220 220c0-24 20-30 20-54' stroke='%23ffe2da' stroke-width='8' fill='none' stroke-linecap='round' opacity='.8'/%3E%3C/svg%3E">
+          <span class="tx-topic-state">更新至第 6 期</span>
+          <h3>糖心日记 · 冬季篇</h3>
+          <p>记录寒冷季节里所有让人变暖的小事，已收到 214 份投稿。</p>
+        </article>
+        <article class="tx-topic">
+          <img alt="专题封面：城市夜色中的便利店与行人剪影" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Cdefs%3E%3ClinearGradient id='t2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232b3a52'/%3E%3Cstop offset='1' stop-color='%235e7490'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='500' fill='url(%23t2)'/%3E%3Crect x='60' y='160' width='280' height='220' rx='10' fill='%23ffd88a' opacity='.85'/%3E%3Crect x='80' y='190' width='100' height='80' rx='6' fill='%23fff6dd'/%3E%3Crect x='200' y='190' width='120' height='140' rx='6' fill='%23334a66'/%3E%3Ccircle cx='140' cy='420' r='18' fill='%23dfe7f0'/%3E%3Crect x='128' y='438' width='24' height='50' rx='10' fill='%23dfe7f0'/%3E%3Ccircle cx='300' cy='430' r='14' fill='%23c9d6e4'/%3E%3Crect x='290' y='444' width='20' height='42' rx='9' fill='%23c9d6e4'/%3E%3C/svg%3E">
+          <span class="tx-topic-state">长期企划</span>
+          <h3>夜行者：城市十二点以后</h3>
+          <p>跟拍深夜仍在工作与生活的人，糖心vl 城市探索系列第二季。</p>
+        </article>
+        <article class="tx-topic">
+          <img alt="专题封面：工作台上散落的脚本与分镜手稿" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23d9c7b0'/%3E%3Crect x='50' y='90' width='300' height='360' rx='10' fill='%23fffaf2' transform='rotate(-3 200 270)'/%3E%3Cg stroke='%23c2a98d' stroke-width='7'%3E%3Cpath d='M90 160h190M90 205h220M90 250h160M90 295h200'/%3E%3C/g%3E%3Crect x='90' y='340' width='90' height='60' rx='6' fill='%23e8a06a'/%3E%3Crect x='196' y='340' width='90' height='60' rx='6' fill='%238c3a5e'/%3E%3C/svg%3E">
+          <span class="tx-topic-state">攻略连载</span>
+          <h3>从零开始的第一条短片</h3>
+          <p>十二期实操攻略，覆盖脚本、拍摄、剪辑与发布，适合完全新手。</p>
+        </article>
+        <article class="tx-topic">
+          <img alt="专题封面：录音棚中的麦克风与声波图形" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Cdefs%3E%3ClinearGradient id='t3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233a1f33'/%3E%3Cstop offset='1' stop-color='%23e8628c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='500' fill='url(%23t3)'/%3E%3Crect x='160' y='140' width='80' height='150' rx='40' fill='%23f4dbe2'/%3E%3Crect x='186' y='290' width='28' height='90' rx='14' fill='%23f4dbe2'/%3E%3Cg stroke='%23ffd7e6' stroke-width='6' fill='none' opacity='.75'%3E%3Cpath d='M80 200v100M110 230v60M300 190v120M330 230v60'/%3E%3C/g%3E%3C/svg%3E">
+          <span class="tx-topic-state">投票中</span>
+          <h3>声音的力量 · 旁白大赛</h3>
+          <p>糖心vl 年度声音企划，用三段限定文本讲述你理解的真实与温暖。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者 -->
+  <section class="tx-section" id="tx-creators">
+    <div class="tx-container">
+      <div class="tx-sec-head">
+        <div>
+          <h2>创作者矩阵</h2>
+          <p>糖心vl 的每一份质感，来自这些持续更新、认真打磨作品的创作者。点击卡片可查看完整档案。</p>
+        </div>
+        <span class="tx-sec-tag">签约创作者</span>
+      </div>
+      <div class="tx-creators">
+        <article class="tx-creator">
+          <div class="tx-big-avatar" style="background:linear-gradient(135deg,#e8628c,#8c3a5e)">林</div>
+          <h3>林晚</h3>
+          <p class="tx-field">美食烹饪 · 家庭厨房</p>
+          <p>做饭十二年，拍饭六年。相信厨房是家里最诚实的空间。</p>
+          <div class="tx-creator-nums"><span><b>186</b>作品</span><span><b>32.4万</b>关注</span></div>
+        </article>
+        <article class="tx-creator">
+          <div class="tx-big-avatar" style="background:linear-gradient(135deg,#5e7490,#2b3a52)">周</div>
+          <h3>周屿</h3>
+          <p class="tx-field">城市探索 · 街头影像</p>
+          <p>习惯在清晨六点和深夜十二点出门，用脚步丈量城市的两副面孔。</p>
+          <div class="tx-creator-nums"><span><b>142</b>作品</span><span><b>24.1万</b>关注</span></div>
+        </article>
+        <article class="tx-creator">
+          <div class="tx-big-avatar" style="background:linear-gradient(135deg,#77a889,#2f5c43)">陈</div>
+          <h3>陈野</h3>
+          <p class="tx-field">健康运动 · 户外活动</p>
+          <p>从程序员到越野跑者，记录身体变化的同时也记录心态重建的过程。</p>
+          <div class="tx-creator-nums"><span><b>98</b>作品</span><span><b>18.7万</b>关注</span></div>
+        </article>
+        <article class="tx-creator">
+          <div class="tx-big-avatar" style="background:linear-gradient(135deg,#f0b429,#c94b3c)">何</div>
+          <h3>何知微</h3>
+          <p class="tx-field">人物访谈 · 家族记忆</p>
+          <p>新闻专业出身，专注口述史与家宅影像，镜头语速很慢，情绪很准。</p>
+          <div class="tx-creator-nums"><span><b>64</b>作品</span><span><b>15.3万</b>关注</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="tx-section alt" id="tx-voices">
+    <div class="tx-container">
+      <div class="tx-sec-head">
+        <div>
+          <h2>社区声音</h2>
+          <p>来自糖心vl 用户与创作者的真实反馈，我们保留原文，不做修饰。</p>
+        </div>
+        <span class="tx-sec-tag">真实评价</span>
+      </div>
+      <div class="tx-comments">
+        <div class="tx-comment">
+          <p>在糖心vl 看了半年，最大的感受是这里的片子里“人味”很足。没有夸张的封面标题，点进去基本都能看完。</p>
+          <div class="tx-c-user"><span class="tx-avatar" style="background:#e8628c">阿</span><b>阿岚</b><span>· 观众</span></div>
+        </div>
+        <div class="tx-comment">
+          <p>作为新人投稿者，第一次收到编辑的修改建议时有点意外，写得很具体，连字幕停留时长都标出来了。</p>
+          <div class="tx-c-user"><span class="tx-avatar" style="background:#5f9a78">木</span><b>木木三</b><span>· 创作者</span></div>
+        </div>
+        <div class="tx-comment">
+          <p>画质是真的稳定。我在地铁上用手机看，也能看清画面里的细节，这点对生活类内容特别重要。</p>
+          <div class="tx-c-user"><span class="tx-avatar" style="background:#5e7490">南</span><b>南窗</b><span>· 观众</span></div>
+        </div>
+        <div class="tx-comment">
+          <p>参加了「糖心日记」冬季篇，整个流程很清楚，从报名到发布都有指引。希望能一直办下去。</p>
+          <div class="tx-c-user"><span class="tx-avatar" style="background:#c99a72">十</span><b>十七</b><span>· 创作者</span></div>
+        </div>
+        <div class="tx-comment">
+          <p>比较认可他们对版权的态度，评论区偶尔有人搬运，举报后处理得很快，作为原创作者会比较安心。</p>
+          <div class="tx-c-user"><span class="tx-avatar" style="background:#8c3a5e">顾</span><b>顾行</b><span>· 创作者</span></div>
+        </div>
+        <div class="tx-comment">
+          <p>我妈妈也看糖心vl 的厨房系列，她说比电视上的做菜节目更像自己家里的样子，这点挺打动我。</p>
+          <div class="tx-c-user"><span class="tx-avatar" style="background:#f0b429">季</span><b>季风</b><span>· 观众</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 -->
+  <section class="tx-section" id="tx-dynamics">
+    <div class="tx-container">
+      <div class="tx-sec-head">
+        <div>
+          <h2>企业动态与更新日志</h2>
+          <p>糖心vl 的官方发布、功能更新与线下活动信息，按月持续同步。</p>
+        </div>
+        <span class="tx-sec-tag">官方发布</span>
+      </div>
+      <div class="tx-log">
+        <article class="tx-log-item">
+          <time datetime="2026-11-18">2026年11月18日</time>
+          <h3>「糖心日记」冬季篇正式开放报名</h3>
+          <p>本届企划以“让冬天变暖的一件小事”为题，报名截止 12 月 5 日，入选作品将在糖心vl 首页专题区集中推荐，并获得官方剪辑与调色指导。</p>
+        </article>
+        <article class="tx-log-item">
+          <time datetime="2026-11-15">2026年11月15日</time>
+          <h3>剪辑模板库升级：新增 42 套原创转场与字幕样式</h3>
+          <p>模板全部由糖心vl 后期团队制作并开放正版使用，适用于生活记录与访谈类内容，创作者可在上传页面直接调用，无需额外下载。</p>
+        </article>
+        <article class="tx-log-item">
+          <time datetime="2026-11-12">2026年11月12日</time>
+          <h3>品牌故事片《甜度刚好》官方首映</h3>
+          <p>影片回顾糖心vl 六年发展历程，并在线上同步举办创作对谈，邀请三位早期创作者分享与品牌共同成长的故事。</p>
+        </article>
+        <article class="tx-log-item">
+          <time datetime="2026-11-05">2026年11月5日</time>
+          <h3>城市记忆档案计划启动第二站</h3>
+          <p>糖心vl 联合本地文化机构，为老街区影像资料进行数字化修复与归档，这是平台履行社会责任、参与公共文化记录的重要一步。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="tx-section alt" id="tx-faq">
+    <div class="tx-container">
+      <div class="tx-sec-head">
+        <div>
+          <h2>帮助中心</h2>
+          <p>关于投稿、版权、画质与合作的常见问题，点击可展开查看详细说明。</p>
+        </div>
+        <span class="tx-sec-tag">FAQ</span>
+      </div>
+      <div class="tx-faq">
+        <details open>
+          <summary>如何在糖心vl 投稿自己的作品？</summary>
+          <p>登录后可进入投稿页面，填写作品标题、简介与标签并上传文件。平台支持常见的高清格式，建议画面比例 16:9，声音响度保持在统一参考范围内。提交后一般在两个工作日内完成初审，结果会通过站内消息通知。</p>
+        </details>
+        <details>
+          <summary>投稿作品需要独占授权吗？</summary>
+          <p>不需要。糖心vl 只要求投稿者拥有作品的合法权利，允许作品在其他平台同步发布。我们更看重内容本身的质量，而非排他性。若后续参与官方专题企划，会单独签署授权说明。</p>
+        </details>
+        <details>
+          <summary>为什么我的作品显示正在审核？</summary>
+          <p>所有投稿都会经过人工审核，重点检查画质、版权素材与内容合规性。审核期间作品不会公开展示，但可以随时在个人中心查看进度。如遇高峰期，处理时间可能略有延长。</p>
+        </details>
+        <details>
+          <summary>糖心vl 对视频画质有什么建议？</summary>
+          <p>建议使用 1080p 及以上分辨率拍摄，保持稳定构图与自然光。我们不建议过度锐化或使用高饱和滤镜，生活类内容更看重真实质感。平台提供统一的调色参考文件，可在创作者中心下载。</p>
+        </details>
+        <details>
+          <summary>如何申请成为签约创作者？</summary>
+          <p>连续发布三条以上原创作品并保持稳定更新后，可在创作者中心提交签约申请。编辑部会综合内容质量、更新频率与社区互动进行评估，通过后获得流量扶持、模板库权限与专题企划优先参与资格。</p>
+        </details>
+        <details>
+          <summary>品牌或机构如何与糖心vl 合作？</summary>
+          <p>我们开放内容共创、专题定制与线下放映等合作形式。请通过页面底部的联系表单说明合作方向与时间安排，品牌合作团队会在三个工作日内回复。所有合作内容均会明确标注，保持社区信息透明。</p>
+        </details>
+        <details>
+          <summary>发现搬运或侵权内容怎么办？</summary>
+          <p>可在作品页的反馈入口提交举报，附上原作品链接与权利说明。糖心vl 设有专门的版权处理通道，核实后会及时下架相关内容，并对重复违规账号采取限制措施，保护原创作者的合法权益。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="tx-section" id="tx-contact">
+    <div class="tx-container">
+      <div class="tx-contact">
+        <div>
+          <h2>联系糖心vl</h2>
+          <p>无论是投稿咨询、品牌合作还是活动报名，都欢迎与我们取得联系。糖心vl 坚持用户至上，每一条留言都会有人认真阅读。</p>
+          <ul class="tx-contact-list">
+            <li>品牌合作：<b>cooperate@tangxin-vl.example</b></li>
+            <li>投稿咨询：<b>create@tangxin-vl.example</b></li>
+            <li>版权与举报：<b>rights@tangxin-vl.example</b></li>
+            <li>工作时间：周一至周五 10:00 - 19:00</li>
+            <li>办公地址：糖心影像中心 · 三楼创作者空间</li>
+          </ul>
+        </div>
+        <form class="tx-contact-form" id="txContactForm">
+          <h3>留下你的需求</h3>
+          <input type="text" id="txFormName" placeholder="你的称呼" aria-label="你的称呼" required>
+          <input type="email" id="txFormMail" placeholder="联系邮箱" aria-label="联系邮箱" required>
+          <textarea id="txFormMsg" placeholder="简单描述你的投稿、合作或报名意向" aria-label="需求描述" required></textarea>
+          <button type="submit">提交并获取回复</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="tx-footer">
+  <div class="tx-container">
+    <div class="tx-footer-grid">
+      <div>
+        <div class="tx-footer-brand"><span class="tx-logo-mark">糖</span>糖心vl</div>
+        <p>糖心vl 官方网站 · 原创生活影像品牌。我们持续运营，为创作者提供专业、正版、高清的内容生态，也为观众保留一处可以慢慢看完的社区。</p>
+        <p style="margin-top:10px">深耕生活影像垂直领域，坚持真实与温暖的表达。</p>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul>
+          <li><a href="#tx-about">品牌解析</a></li>
+          <li><a href="#tx-focus">焦点内容</a></li>
+          <li><a href="#tx-stream">人气影像流</a></li>
+          <li><a href="#tx-topics">专题企划</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>创作者</h3>
+        <ul>
+          <li><a href="#tx-creators">创作者矩阵</a></li>
+          <li><a href="#tx-contact" data-open-submit="1">投稿与报名</a></li>
+          <li><a href="#tx-dynamics">企业动态</a></li>
+          <li><a href="#tx-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关于我们</h3>
+        <ul>
+          <li>品牌故事 · 六周年</li>
+          <li>社会责任 · 城市记忆档案</li>
+          <li>正版内容与版权保护</li>
+          <li>合作与联系</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tx-footer-bottom">
+      <span>© 2026 糖心vl 官方网站 · 版权所有 · 持续运营中</span>
+      <span>原创内容受版权保护 · 转载与合作请联系官方渠道</span>
+    </div>
+  </div>
+</footer>
+
+<button class="tx-to-top" id="txToTop" aria-label="回到顶部">↑</button>
+<div class="tx-toast" id="txToast" role="status" aria-live="polite"></div>
+
+<div class="tx-modal" id="txModal" role="dialog" aria-modal="true" aria-labelledby="txModalTitle">
+  <div class="tx-modal-box">
+    <button class="tx-modal-close" id="txModalClose" aria-label="关闭">×</button>
+    <h3 id="txModalTitle">投稿与报名</h3>
+    <p id="txModalDesc">留下你的邮箱，糖心vl 编辑部会把最新企划说明与投稿指南发送给你。</p>
+    <input type="email" id="txModalMail" placeholder="你的邮箱" aria-label="你的邮箱">
+    <button class="tx-modal-ok" id="txModalOk">确认提交</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var toastEl = document.getElementById('txToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('tx-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('tx-show'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var header = document.querySelector('.tx-header');
+  var burger = document.getElementById('txBurger');
+  burger.addEventListener('click', function(){
+    var open = header.classList.toggle('tx-nav-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.querySelectorAll('#txNav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      header.classList.remove('tx-nav-open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('txSearchInput');
+  var searchBtn = document.getElementById('txSearchBtn');
+  var searchFeedback = document.getElementById('txSearchFeedback');
+  var searchData = ['糖心日记 冬季篇','林晚 厨房访谈','清晨计划 城市影像','手冲咖啡日常记录','品牌故事片 甜度刚好','手作陶艺 失败清单','老胶片机 横评'];
+  function doSearch(){
+    var kw = searchInput.value.trim();
+    if(!kw){
+      searchFeedback.textContent = '请输入想要查找的内容、创作者或专题名称。';
+      searchFeedback.classList.add('tx-show');
+      return;
+    }
+    var hit = searchData.filter(function(item){ return item.indexOf(kw) > -1; });
+    if(hit.length){
+      searchFeedback.textContent = '在糖心vl 站内找到 ' + hit.length + ' 条相关内容：' + hit.join('、');
+    }else{
+      searchFeedback.textContent = '暂未找到与“' + kw + '”直接匹配的内容，已为你推荐焦点内容《甜度刚好》与专题「糖心日记」。';
+    }
+    searchFeedback.classList.add('tx-show');
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+
+  /* 点赞 / 收藏 */
+  document.querySelectorAll('[data-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var span = btn.querySelector('span');
+      var raw = span.textContent;
+      var text = btn.getAttribute('data-liked') === '1';
+      if(text){
+        btn.setAttribute('data-liked','0');
+        btn.classList.remove('tx-active');
+        span.textContent = btn.getAttribute('data-origin') || raw;
+        toast('已取消点赞');
+      }else{
+        if(!btn.getAttribute('data-origin')) btn.setAttribute('data-origin', raw);
+        btn.setAttribute('data-liked','1');
+        btn.classList.add('tx-active');
+        span.textContent = '已赞';
+        toast('感谢你的点赞，糖心vl 会继续更新');
+      }
+    });
+  });
+  document.querySelectorAll('[data-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('tx-saved');
+      var label = btn.childNodes[1];
+      btn.innerHTML = (saved ? '★' : '☆') + ' ' + (saved ? '已收藏' : '收藏');
+      toast(saved ? '已加入你的收藏夹' : '已从收藏夹移除');
+    });
+  });
+
+  /* 分享 */
+  document.querySelectorAll('[data-share]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var title = btn.getAttribute('data-share') || document.title;
+      var link = window.location.origin + window.location.pathname;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(title + ' ' + link).then(function(){
+          toast('分享信息已复制，可粘贴到微信或微博');
+        }).catch(function(){
+          toast('已生成分享信息：' + title);
+        });
+      }else{
+        toast('已生成分享信息：' + title);
+      }
+    });
+  });
+
+  /* 评论反馈 */
+  var commentTips = ['评论入口已展开，欢迎在糖心vl 留下你的观看感受。','感谢你的评论意愿，糖心vl 社区鼓励具体、友善的交流。','评论功能已就绪，你的想法会被创作者看到。'];
+  var ci = 0;
+  document.querySelectorAll('[data-comment]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      toast(commentTips[ci % commentTips.length]);
+      ci++;
+    });
+  });
+
+  /* 弹窗 */
+  var modal = document.getElementById('txModal');
+  var modalMail = document.getElementById('txModalMail');
+  var modalClose = document.getElementById('txModalClose');
+  var modalOk = document.getElementById('txModalOk');
+  function openModal(){
+    modal.classList.add('tx-open');
+    modalMail.focus();
+  }
+  function closeModal(){ modal.classList.remove('tx-open'); }
+  document.getElementById('txSubmitOpen').addEventListener('click', function(e){ e.preventDefault(); openModal(); });
+  document.querySelectorAll('[data-open-submit]').forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); openModal(); });
+  });
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  modalOk.addEventListener('click', function(){
+    var v = modalMail.value.trim();
+    if(!v || v.indexOf('@') < 1){ toast('请填写有效的邮箱地址'); return; }
+    modalMail.value = '';
+    closeModal();
+    toast('已收到，糖心vl 编辑部会尽快与你联系');
+  });
+
+  /* 联系表单 */
+  document.getElementById('txContactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('txFormName').value.trim();
+    if(!name){ toast('请填写你的称呼'); return; }
+    toast('提交成功，糖心vl 将在一个工作日内回复你');
+    e.target.reset();
+  });
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('txToTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 480){ toTop.classList.add('tx-show'); }else{ toTop.classList.remove('tx-show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-count]');
+  var done = false;
+  function runCounters(){
+    if(done) return;
+    done = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var start = 0;
+      var step = Math.max(1, Math.floor(target / 48));
+      var timer = setInterval(function(){
+        start += step;
+        if(start >= target){ start = target; clearInterval(timer); }
+        el.textContent = start;
+      }, 24);
+    });
+  }
+  var hero = document.querySelector('.tx-hero');
+  if('IntersectionObserver' in window && hero){
+    var ob = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) runCounters(); });
+    }, {threshold:.35});
+    ob.observe(hero);
+  }else{
+    runCounters();
+  }
+
+  /* 复制链接（页脚品牌位） */
+  var brand = document.querySelector('.tx-footer-brand');
+  if(brand){
+    brand.style.cursor = 'pointer';
+    brand.title = '点击复制页面链接';
+    brand.addEventListener('click', function(){
+      var link = window.location.origin + window.location.pathname;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){ toast('页面链接已复制'); }).catch(function(){ toast('复制失败，请手动复制浏览器地址'); });
+      }else{
+        toast('请手动复制浏览器地址分享糖心vl');
+      }
+    });
+  }
+})();
+</script>
+</body>
+                                                                 </html>
